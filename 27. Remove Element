@@ -1,0 +1,18 @@
+class Solution(object):
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        vec = []
+
+        for i in range(len(nums)):
+            if nums[i] != val:
+                vec.append(nums[i])
+        
+        k = len(vec)
+        nums[:] = vec  # reemplaza el contenido de nums con vec
+
+        return k 
+        
